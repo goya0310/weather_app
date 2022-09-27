@@ -16,7 +16,7 @@ function App() {
 
   function onSearch(ciudad) {
     // recibe ciudad, metodo fetch sirve para solicitar info desde backend, devuelve una promesa
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric`)
       .then(r => r.json())
       .then((recurso) => {
         if (recurso.main !== undefined) {
