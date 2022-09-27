@@ -1,0 +1,123 @@
+.Card {
+    position: relative;
+    
+    border: solid 1px var(--border-color); /* en index.css se pone ::root*/
+    /* rem esta basado en el tamaño del fontsize del root */
+    /* si el font-size en root es 16px, 1 rem seria igual a 16px */
+    /* es para que sea mas responsive el sitio web */
+    border-radius: .5rem;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+
+    padding: .25rem;
+
+    /* tomo color guardado en root con este var */
+    background-color: var(--card-bkg-color);
+    color: white;
+    
+}
+
+
+
+.Button {
+    /* p/q' quede anclado en forma relativa al elemento padre */
+    position: absolute;
+    
+    top: 0.25rem;
+    right: 0.25rem;
+    
+    background-color: var(--btn-bkg-danger);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+    box-sizing: border-box;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    /* p/1' cambie cuando se posiciona icono sobre el boton */
+    cursor: pointer;
+    /* tiempo de demora de la transicion */
+    transition: background-color 250ms;
+    
+    border: 1px solid transparent;
+    border-radius: 9999px;
+}
+
+/* para que cambie de color al posicionar el icono sobre el boton */
+.Button:hover {
+    background-color: var(--btn-bkg-danger-hover);
+}
+
+/* en section dentro de card */
+.Card > section {
+    display: grid;
+    /* para crear 3 columnas, 1fr para que sea mismo tamaño */
+    grid-template-columns: repeat(3, 1fr);
+}
+/* .Name {
+    font-size: 25px;
+    font-weight: bold; */
+    /* font-family: 'Permanent Marker', cursive;  */
+    /* color: #4b4d50;
+    text-transform: uppercase;
+    border: 0;
+    justify-content:left;
+    margin-left: 5px;
+    width: 375px;
+} */
+
+.Name {
+    font-size: 1.75rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.MainCard {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.MainCard .Button {
+    display:none;
+}
+
+.MainCard .Name {
+    font-size: 3rem;
+    text-align: left;
+    padding: 1rem;
+}
+
+.MainCard > section {
+    align-items: flex-start;
+
+}
+
+.MainCard > section > .Temp {
+    color: white;
+    padding-top: 2rem;
+}
+
+.MainCard > section > img {
+    width: 150px;
+    height: 150px;
+
+    /* grid-column: 1 / 1; */
+
+}
+
+
+
+/* 
+.MinMax {
+    display: flex;
+    width: 400px;
+    height: 210px;
+    justify-content: center;
+    align-items: center;
+} */
+

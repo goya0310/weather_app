@@ -1,0 +1,6 @@
+.Cards {
+    display: flex;
+    flex-direction: column;
+    /* para crear separacion entre las Cards */
+    gap: 1rem;
+}

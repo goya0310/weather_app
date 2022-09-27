@@ -1,0 +1,3 @@
+# para no subir a github
+node_modules
+.env

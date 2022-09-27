@@ -1,0 +1,47 @@
+.App {
+    background-image: url("https://images.unsplash.com/photo-1537210249814-b9a10a161ae4?ixlib=rb-1.2.1&dl=felix-mittermeier-L4-16dmZ-1c-unsplash.jpg&w=2400&q=80&fm=jpg&crop=entropy&cs=tinysrgb");
+    background-repeat: no-repeat;
+    /* para que el background ocupe todo */
+    background-size: cover;
+
+    
+
+}
+
+.Header {
+    position: fixed;
+    /* z index es para posicionar una caja encima o detras de otra, como layers */
+    z-index: 1;
+    width: 100%;
+    height: 4rem;
+    background-color: #ffffff00;
+    padding: 1rem;
+}
+
+
+
+.Main {
+    /* para crear columnas */
+    display: grid;
+    /* para que sean 2 columnas del mismo tamaño */
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.MainCity {
+    /* filtro para que se vea borroso */
+    backdrop-filter: blur(8px);
+    /* le puse opacidad en un 25% 256/4 en hexadecimal da 40, se pone 40 al ultimo de negro #000000 */
+    background-color: #00000040;
+}
+
+.App, .MainCity{
+    height: 100%;
+    /* para que sea todo el alto de la pantalla 100% vieportheight (vh) */
+    min-height: 100vh;
+}
+
+.MainCity, .ReelCities {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

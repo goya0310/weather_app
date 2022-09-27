@@ -1,0 +1,35 @@
+/* .Temp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    width: 100%;    
+    background-color: yellowgreen;
+} */
+
+.Temp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.label {
+    font-size: .75rem;
+    font-weight: 300;
+}
+
+.label,
+.value {
+    text-align: left;
+    
+}
+
+.value {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
